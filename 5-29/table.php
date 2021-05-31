@@ -1,4 +1,5 @@
 <?php
+    include"piont.php";
  $link=mysqli_connect('127.0.0.1','root','root','php2102');
  $sql="select * from users";
  $query=mysqli_query($link,$sql);
@@ -13,6 +14,7 @@
 	<title>Document</title>
 </head>
 <body>
+    <h3>欢迎 <?php  echo $_SESSION['username']; ?> 登录</h3>
     <h1>用户列表</h1>
     <table border="1">
         <tr>
